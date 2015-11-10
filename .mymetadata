@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="doIT"
+  id="myeclipse.1432967933793"
+  context-root="/doIT"
+  j2ee-spec="6.0"
+  archive="doIT.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

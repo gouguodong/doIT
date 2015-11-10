@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="userManage" namespace="/manage/user" extends="struts-power">
+		<action name="user*" class="userManageAction" method="{1}">
+			<result name="UI">/WEB-INF/backstage/user/admin-user-list.jsp</result>
+			<result name="detail">/WEB-INF/backstage/user/admin-user-detail.jsp</result>
+		</action>
+	</package>
+
+</struts>	

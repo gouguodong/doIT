@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="courseMap" namespace="/courseMap" extends="struts-default">
+		<action name="*" class="courseMapAction" method="{1}">
+			<result name="map">/WEB-INF/frontstage/map/map.jsp</result>
+		</action>
+	</package>
+
+</struts>	

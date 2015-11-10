@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<!-- 配置为开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 把扩展名配置为action -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 把主题配置为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 修改Struts默认的最大上传文件大小(原来的为2M) -->
+	<constant name="struts.multipart.maxSize" value="1000000000" />
+
+	<include file="struts/back/*.xml"></include>
+	<include file="struts/*.xml"></include>
+	<include file="struts/course/*.xml"></include>
+	<include file="struts/user/*.xml"></include>
+	<include file="struts/code/*.xml"></include>
+	<include file="struts/message/*.xml"></include>
+	<include file="struts/video/*.xml"></include>
+	<include file="struts/question/*.xml"></include>
+	<include file="struts/friend/*.xml"></include>
+	<include file="struts/map/*.xml"></include>
+	
+	<!-- 权限控制 -->
+	<package name="struts-power" extends="struts-default">
+		<interceptors>
+			<!-- 配置拦截器 -->
+			<interceptor name="myInterceptor" class="com.jsu.doIT.utils.MyInterceptor"></interceptor>
+			<interceptor-stack name="mydefaultStack">
+				<interceptor-ref name="myInterceptor" />
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="mydefaultStack"></default-interceptor-ref>
+		<global-results>
+			<result name="notLogin" type="redirectAction">../admin/adminloginUI.action</result>
+		</global-results>
+		
+	</package>
+</struts>	

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="courseManage" namespace="/manage/course" extends="struts-power">
+		<action name="course*" class="courseManageAction" method="{1}">
+			<result name="success">/WEB-INF/backstage/course/admin-course-add.jsp</result>
+			<result name="OK" type="redirectAction">../voide/voidevoide.action</result>
+		</action>
+	</package>
+
+</struts>	

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="report" namespace="/manage/report" extends="struts-power">
+		<action name="report*" class="reportAction" method="{1}">
+			<result name="UI">/WEB-INF/backstage/report/admin-report-list.jsp</result>
+			<result name="detail">/WEB-INF/backstage/report/admin-report-detail.jsp</result>
+		</action>
+	</package>
+
+</struts>	

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="video" namespace="/video" extends="struts-default">
+		<action name="*" class="videoAction" method="{1}">
+			<result name="index">/WEB-INF/frontstage/video.jsp</result>
+		</action>   
+	</package>
+	
+	<package name="videoList" namespace="/videoList" extends="struts-default">
+		<action name="*" class="videoListAction" method="{1}">
+			<result name="index">/WEB-INF/frontstage/videoList.jsp</result>
+			<result name="comment">/WEB-INF/frontstage/videoList-comment.jsp</result>
+			<result name="question">/WEB-INF/frontstage/videoList-question.jsp</result>
+			<result name="label">/WEB-INF/frontstage/videoList-label.jsp</result>
+		</action>   
+	</package>
+
+</struts>

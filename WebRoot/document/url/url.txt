@@ -1,0 +1,13 @@
+http://localhost:8080/izhi/videoList/index.action?courseId=4 课程主页
+
+http://localhost:8080/izhi/code/codeUI.action 在线编程模块
+
+http://localhost:8080/izhi/friendIndex/index.action?id=1 好友列表（friendIndex.html)
+
+(qiqi)个人信息相关：
+用户代码：http://localhost:8080/izhi/usercode/userCode.action
+用户问答(提问)：http://localhost:8080/izhi/userpost/quePost.action
+用户课程(已关注课程)：http://localhost:8080/izhi/usercourse/attention.action
+用户已学课程：http://localhost:8080/izhi/usercourse/learning.action
+用户学完课程：http://localhost:8080/izhi/usercourse/learned.action
+用户回答：http://localhost:8080/izhi/userreply/myReply.action

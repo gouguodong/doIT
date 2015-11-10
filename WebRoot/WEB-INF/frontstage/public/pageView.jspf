@@ -1,0 +1,33 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
+
+<nav>
+	<ul class="pagination">
+		<li class='${currentPage == 1 ? "disabled" : ""}'><a href="javascript: gotoPage(1)">首页</a></li>
+		<li class='${currentPage == 1 ? "disabled" : ""}'><a href="javascript: gotoPage(${currentPage - 1})" aria-label="Previous"> <span
+				aria-hidden="true">上一页</span> </a>
+		</li>
+		<s:iterator begin="%{beginPageIndex}" end="%{endPageIndex}" var="num">
+			<s:if test="#num == currentPage"> <%-- 当前页 --%>
+				<li class="active"><a href="javascript: gotoPage(${num})">${num }</a>
+			</s:if>
+			<s:else> <%-- 非当前页 --%>
+				<li><a href="javascript: gotoPage(${num})">${num }</a>
+			</s:else>
+		</s:iterator>
+		<li class='${currentPage == pageCount ? "disabled" : ""}'><a href="javascript: gotoPage(${currentPage + 1})" aria-label="Next"> <span aria-hidden="true">下一页</span>
+		</a>
+		</li>
+		<li class='${currentPage == pageCount ? "disabled" : ""}'><a href="javascript: gotoPage(${pageCount})">尾页</a></li>
+	</ul>
+</nav>
+
+<script type="text/javascript">
+	function gotoPage( pageNum ){
+		// window.location.href = "forum_show.action?id=${id}&pageNum=" + pageNum;
+		var form = $("#pageForm")[0];
+		$(form).append("<input type='hidden' name='pageNum' value='" + pageNum +"'>");
+		form.submit();
+	}
+</script>

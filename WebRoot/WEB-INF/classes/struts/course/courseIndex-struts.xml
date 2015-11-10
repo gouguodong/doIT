@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="courseIndex" namespace="/course" extends="struts-default">
+		<action name="*" class="courseIndxeAction" method="{1}">
+			<result name="success">/WEB-INF/frontstage/courseList.jsp</result>
+			<result name="search">/WEB-INF/frontstage/search/searchCourse.jsp</result>
+		</action>
+	</package>
+
+</struts>	

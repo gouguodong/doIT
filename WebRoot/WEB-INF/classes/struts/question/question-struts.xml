@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	
+	<package name="question" namespace="/question" extends="struts-default">
+		<action name="*" class="questionAction" method="{1}">
+			<result name="addUI">/WEB-INF/frontstage/question-save.jsp</result>
+			<result name="addSuccess">/WEB-INF/frontstage/question-success.jsp</result>
+			<result name="index">/WEB-INF/frontstage/question.jsp</result>
+			<result name="show">/WEB-INF/frontstage/question-detail.jsp</result>
+			<result name="more">/WEB-INF/frontstage/question-top.jsp</result>
+			<result name="adopt" type="redirectAction">show?questionId=${questionId}</result>
+		</action>
+	</package>
+
+</struts>

@@ -1,0 +1,37 @@
+http://localhost:8080/izhi/course/index.action
+	进入课程首页
+http://localhost:8080/izhi/course/courselist.action?typeId=类型编号
+	列表最新课程
+http://localhost:8080/izhi/course/coursehot.action
+	列表最热课程
+http://localhost:8080/izhi/course/courseforme.action
+	个性推荐
+http://localhost:8080/izhi/login/login.action?userName=.&userPwd=.
+	登录
+http://localhost:8080/izhi/regist/regist.action?
+
+http://localhost:8080/izhi/userInfo/pwdUI.action
+	修改密码界面
+http://localhost:8080/izhi/userInfo/pwdupdate.action?oldPwd=.&userPwd=?
+	修改密码
+http://localhost:8080/izhi/userInfo/emailUI.action
+	修改邮箱界面
+http://localhost:8080/izhi/userInfo/emailsend.action?userEmail=.
+	发送邮件/更新邮箱并发送邮件
+http://localhost:8080/izhi/userInfo/emailverify.action?userId=.
+	邮箱激活/账户激活
+http://localhost:8080/izhi/userInfo/headUI.action
+	修改头像界面
+http://localhost:8080/izhi/userInfo/changeSystemHead.action
+	重新生成头像/从系统中随机获取一张图片作为头像
+http://localhost:8080/izhi/userInfo/userInfoUI.action
+	修改用户基本信息界面
+http://localhost:8080/izhi/userInfo/userInfoupdate.action?officeId=.&countyId=.&userSex.&.
+	更新用户基本信息
+userInfo/userInfogetCity.action?provinceId=.
+	获取某一个省份下的所有城市
+userInfo/userInfogetCounty.action?cityId=.
+	获取某一个城市下的所有区县
+
+后台首页
+	manage/admin/adminindex.action

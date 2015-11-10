@@ -1,0 +1,74 @@
+/*消息中心*/
+
+.message {
+	background-color: #CCCCFF;
+	opacity: .8;
+	text-align: center;
+}
+.message .header {
+	background-color: #666666;
+	text-align: center;
+}
+.message li {
+	list-style: none;
+	width: 100%;
+}
+.header ul {
+	width: 148%;
+	margin-left: -24%;
+}
+.message .header .active {
+	background-color: #CCCCFF;
+}
+.message .info {
+	background-color: #CCCCFF;
+}
+.message .info .active {
+	background-color: #9ACFEA;
+}
+.message .info li {
+	text-align: left;
+	border-bottom: #0081C2;
+}
+.message .recentMessage {
+	border-bottom: 1px solid #00AAEE;
+}
+.message .recentMessage a {
+	color: #000000;
+}
+.message .chat {
+	background-color: #CCFFCC;
+}
+.message .chat .show {
+	overflow: auto;
+}
+#messageInput {
+	margin-right: 2%;
+	resize: none;
+}
+#messageList {
+	margin-left: 2%;
+}
+#messageList .friend {
+	text-align: left;
+}
+#messageList .myself {
+	text-align: right;
+}
+.appendMessage input {
+	margin: 8px 0px;
+}
+.bs-example {
+	border-color: #ddd;
+	border-radius: 4px 4px 0 0;
+	border-width: 1px;
+	box-shadow: none;
+	margin-left: 0;
+	margin-right: 0;
+	border-style: solid;
+}
+.bs-example-popover .popover {
+	position: relative;
+	display: block;
+	float: left;
+}
